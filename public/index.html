@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>calc</h1>
+      <div id="theme">
+        <h6>THEME</h6>
+        <div class="theme-changer">
+          <div>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div id="chk-theme" onclick="change()">
+            <div class="state" id="state"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="display" id="display"></div>
+    <div class="keypad">
+      <input type="button" value="1" onclick="calculate(event)">
+      <input type="button" value="2" onclick="calculate(event)">
+      <input type="button" value="3" onclick="calculate(event)">
+      <input type="button" value="4" onclick="calculate(event)">
+      <input type="button" value="5" onclick="calculate(event)">
+      <input type="button" value="6" onclick="calculate(event)">
+      <input type="button" value="7" onclick="calculate(event)">
+      <input type="button" value="8" onclick="calculate(event)">
+      <input type="button" value="9" onclick="calculate(event)">
+      <input type="button" value="0" onclick="calculate(event)">
+      <input type="button" value="+" onclick="calculate(event)">
+      <input type="button" value="-" onclick="calculate(event)">
+      <input type="button" value="*" onclick="calculate(event)">
+      <input type="button" value="/" onclick="calculate(event)">
+      <input type="button" value="=" onclick="calculate(event)">
+      <input type="button" value="." onclick="calculate(event)">
+      <input type="button" value="Del" onclick="calculate(event)">
+      <input type="button" value="Reset" onclick="calculate(event)">
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/sivakumarkatari2020" target="_parent">Siva Kumar Katari</a>.
+  </div>
+
+  <script src="index.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

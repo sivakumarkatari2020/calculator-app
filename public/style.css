@@ -1,0 +1,440 @@
+:root{
+    --primary : hsl(222,26%,31%);
+    --secondary : hsl(223,31%,20%);
+    --screen : hsl(224,36%,15%);
+
+    --blue-key : hsl(225,21%,49%);
+    --blue-key-sh : hsl(224,28%,35%);
+
+    --tog-key : hsl(6,63%,50%);
+    --tog-key-sh : hsl(6,70%,34%);
+
+    --main-key : hsl(30,25%,89%);
+    --main-key-sh : hsl(28,16%,65%);
+
+
+    --text1 : #ffffff;
+    --text2 : hsl(221,14%,31%);
+    --text3 : #ffffff;
+    --sp-text : #ffffff;
+}
+
+/* MEDIA QUERY FOR DESKTOP AND TABLET LAYOUT*/
+@media screen and (min-width : 450px) {  
+
+body{
+    background-color: var(--primary);
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    height: 530px;
+    background-color: inherit;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    color: var(--text1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#theme{
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#theme h5{
+    letter-spacing: 1px;
+}
+.theme-changer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.theme-changer > div{
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme-changer p{
+    font-size: 12px;
+}
+#chk-theme{
+    width: 55px;
+    height: 15px;
+    padding: 1px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#chk-theme .state{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--tog-key);
+
+    transition: all 1s linear;
+}
+.display{
+    width: 400px;
+    height: 120px;
+    padding: 10px;
+    background-color: var(--screen);
+    color: var(--text1);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+   font-size: 24px;
+   font-weight: bold;
+   overflow: auto;
+}
+.keypad{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 15px;
+    grid-template-areas: "seven eight nine del"
+                         "four five six add"
+                         "one two three sub"
+                         "dot zero div mul"
+                         "reset reset equals equals";
+}
+.keypad input{
+    background-color: var(--main-key);
+    color: var(--text2);
+    font-size: 24px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 3px  var(--main-key-sh);
+}
+input[value='1']{
+    grid-area: one;
+}
+input[value='2']{
+    grid-area: two;
+}
+input[value='3']{
+    grid-area: three;
+}
+input[value='4']{
+    grid-area: four;
+}
+input[value='5']{
+    grid-area: five;
+}
+input[value='6']{
+    grid-area: six;
+}
+input[value='7']{
+    grid-area: seven;
+}
+input[value='8']{
+    grid-area: eight;
+}
+input[value='9']{
+    grid-area: nine;
+}
+input[value='0']{
+    grid-area: zero;
+}
+input[value='Del']{
+    grid-area: del;
+    background-color:  var(--blue-key);
+    box-shadow: 0px 3px var(--blue-key-sh);
+    color: var(--text3);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+input[value='Reset']{
+    grid-area: reset;
+    background-color:  var(--blue-key);
+    box-shadow: 0px 3px var(--blue-key-sh);
+    color: var(--text3);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+input[value='+']{
+    grid-area: add;
+}
+input[value='-']{
+    grid-area: sub;
+}
+input[value='*']{
+    grid-area: mul;
+}
+input[value='/']{
+    grid-area: div;
+}
+input[value='.']{
+    grid-area: dot;
+}
+input[value='=']{
+    grid-area: equals;
+    background-color:  var(--blue-key);
+    box-shadow: 0px 3px var(--blue-key-sh);
+    color: var(--text3);
+}
+input:hover{
+    background-color: var(--tog-key);
+    box-shadow: 0px 3px var(--tog-key-sh);
+    color: var(--sp-text);
+}
+
+}
+
+
+
+/* MEDIA QUERY FOR MOBILE LAYOUT */
+@media screen and (max-width : 450px) {   
+
+body{
+    background-color: var(--primary);
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 530px;
+    background-color: inherit;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    color: var(--text1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#theme{
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#theme h5{
+    letter-spacing: 1px;
+}
+.theme-changer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.theme-changer > div{
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme-changer p{
+    font-size: 12px;
+}
+#chk-theme{
+    width: 55px;
+    height: 15px;
+    padding: 1px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#chk-theme .state{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--tog-key);
+
+    transition: all 1s linear;
+}
+.display{
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    background-color: var(--screen);
+    color: var(--text1);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+   font-size: 24px;
+   font-weight: bold;
+   overflow: auto;
+}
+.keypad{
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 15px;
+    grid-template-areas: "seven eight nine del"
+                         "four five six add"
+                         "one two three sub"
+                         "dot zero div mul"
+                         "reset reset equals equals";
+}
+.keypad input{
+    background-color: var(--main-key);
+    color: var(--text2);
+    font-size: 24px;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 3px  var(--main-key-sh);
+}
+input[value='1']{
+    grid-area: one;
+}
+input[value='2']{
+    grid-area: two;
+}
+input[value='3']{
+    grid-area: three;
+}
+input[value='4']{
+    grid-area: four;
+}
+input[value='5']{
+    grid-area: five;
+}
+input[value='6']{
+    grid-area: six;
+}
+input[value='7']{
+    grid-area: seven;
+}
+input[value='8']{
+    grid-area: eight;
+}
+input[value='9']{
+    grid-area: nine;
+}
+input[value='0']{
+    grid-area: zero;
+}
+input[value='Del']{
+    grid-area: del;
+    background-color:  var(--blue-key);
+    box-shadow: 0px 3px var(--blue-key-sh);
+    color: var(--text3);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+input[value='Reset']{
+    grid-area: reset;
+    background-color:  var(--blue-key);
+    box-shadow: 0px 3px var(--blue-key-sh);
+    color: var(--text3);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+input[value='+']{
+    grid-area: add;
+}
+input[value='-']{
+    grid-area: sub;
+}
+input[value='*']{
+    grid-area: mul;
+}
+input[value='/']{
+    grid-area: div;
+}
+input[value='.']{
+    grid-area: dot;
+}
+input[value='=']{
+    grid-area: equals;
+    background-color:  var(--blue-key);
+    box-shadow: 0px 3px var(--blue-key-sh);
+    color: var(--text3);
+}
+input:hover{
+    background-color: var(--tog-key);
+    box-shadow: 0px 3px var(--tog-key-sh);
+    color: var(--sp-text);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
