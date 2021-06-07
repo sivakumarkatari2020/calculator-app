@@ -1,9 +1,4 @@
-console.log(getComputedStyle(document.documentElement)
-.getPropertyValue('--text1'));
-
-document.documentElement.style
-    .setProperty('--my-variable-name', 'pink');
-
+//FUNCTION TO CHANGE THE THEME OF THE LAYOUT BASED ON THE POSITION OF THEME BALL
 function change(){
 
     if(document.getElementById('chk-theme').style.justifyContent == "flex-start"){

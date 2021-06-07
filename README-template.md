@@ -37,7 +37,8 @@ screenshot 2 - images/preview2.png
 
 ### Links
 
-- Live Site URL: https://calculator-app-3fe8c.web.app/
+-- Working site URL(github repo) : https://github.com/sivakumarkatari2020/calculator-app
+- Live Site URL: https://calculator-app-3fe8c.firebase.app/
 
 **I deployed this project on Google Firebase for its simplicity.**
 
