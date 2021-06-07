@@ -10,7 +10,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Links](#links)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
@@ -38,9 +37,9 @@ screenshot 2 - images/preview2.png
 ### Links
 
 -- Working site URL(github repo) : https://github.com/sivakumarkatari2020/calculator-app
-- Live Site URL: https://calculator-app-3fe8c.firebase.app/
+- Live Site URL: https://caculator-app.netlify.app/
 
-**I deployed this project on Google Firebase for its simplicity.**
+**I deployed this project on Netlify for its simplicity.**
 
 ### Built with
 
@@ -90,9 +89,6 @@ While I building it I got stuck at switching themes.And it is not about two them
 
 I accessed variable values using documentElement.
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 ### Useful resources
 
