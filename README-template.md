@@ -101,8 +101,7 @@ I accessed variable values using documentElement.
 - Frontend Mentor - https://www.frontendmentor.io/profile/sivakumarkatari2020
 - LinkedIn - https://www.linkedin.com/in/siva-kumar-katari-25519919a/
 - Instagram - https://www.instagram.com/web_surfers_/
-- Github - https://github.com/sivakumarkatari2020
-
+- Github - https://github.com/sivakumarkatari2020/
 
 ## Acknowledgments
 
