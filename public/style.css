@@ -18,6 +18,9 @@
     --text3 : #ffffff;
     --sp-text : #ffffff;
 }
+*{
+    transition : .5s;
+}
 
 /* MEDIA QUERY FOR DESKTOP AND TABLET LAYOUT*/
 @media screen and (min-width : 450px) {  
@@ -39,7 +42,6 @@ body{
 .container{
     width: 400px;
     height: 530px;
-    background-color: inherit;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -243,7 +245,6 @@ body{
 .container{
     width: 80%;
     height: 600px;
-    background-color: inherit;
     padding: 10px;
     display: flex;
     flex-direction: column;
