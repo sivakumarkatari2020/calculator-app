@@ -17,7 +17,7 @@ function calculate(e){
                 throw 'ERROR!try to enter number after operator';
             }
         }catch(err){
-            document.getElementById('display').innerHTML = `<h1 style="padding:0;margin:0;color:red;font-size:16px;">${err}</h1>`;
+            document.getElementById('error-box').innerHTML = `<h1 style="padding:0;margin:0;color:red;font-size:16px;">${err}</h1>`;
         }
 
     }else if(e.target.value == "Del"){
